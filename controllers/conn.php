@@ -8,7 +8,6 @@
     try {
         $DBH = new PDO("mysql:host=$host;dbname=$dbname", $user,$pass);
         $DBH->setAttribute( PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);# set errorattribute
-
         session_start();
         
         # Fetch user profile details

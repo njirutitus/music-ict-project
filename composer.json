@@ -1,0 +1,13 @@
+{
+  "name": "admin/music",
+  "authors": [
+    {
+      "name": "titus njiru",
+      "email": "njirutitus@gmail.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "heroku/heroku-buildpack-php": "*"
+  }
+}

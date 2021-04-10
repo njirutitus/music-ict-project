@@ -1,6 +1,7 @@
 <?php
 require_once './includes/header.php';
 require_once './controllers/conn.php';
+require_once './controllers/models.php';
 ?>
 <div class="container">
     <div class="row">
