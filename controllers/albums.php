@@ -7,8 +7,7 @@
         $STH->setFetchMode(PDO::FETCH_ASSOC);
         # showing theresults
         while($row = $STH->fetch()){
-                $n = rand(0,10);
-                $avatar = "blank_product".$n.".jpg";
+                $avatar = $row['album_logo'];
             ?>
 
             <div class="col-12 col-md-3 mb-2">

@@ -25,6 +25,7 @@
         catch(PDOException $e){
             $_SESSION['error'] = "Hey, $first_name. I'm afraid I can't register you right now.";
             file_put_contents('PDOErrors.txt', $e->getMessage(), FILE_APPEND); # log errors to afile
+            exit();
         }
     }
 ?>

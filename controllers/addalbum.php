@@ -15,6 +15,9 @@
         $user = $_SESSION['user'];
         $albumlogo = $_FILES['albumlogo']["name"];
 
+        $n = rand(0,10);
+        $albumlogo = "blank_product$n.jpg";
+
         try{
             $STH = $DBH->prepare("INSERT INTO album(album_name, artist, genre,album_logo,user) values(?,?,?,?,?)");
             $data = array($title,$artist,$genre,$albumlogo,$user);
