@@ -1,4 +1,5 @@
 <?php
+    require_once './controllers/conn.php';
     //users table
     $sql = "CREATE TABLE IF NOT EXISTS `user` (
         `id` bigint(20) UNSIGNED NOT NULL,
@@ -39,5 +40,7 @@
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
     $STH = $DBH->prepare($sql);
     $STH->execute();
+
+    echo "Executed all migrations."
 
  ?>

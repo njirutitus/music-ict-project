@@ -6,7 +6,7 @@ require_once './controllers/conn.php';
 <div class="row">
         <div class="col-sm-6 m-auto p-3 border mt-2 shadow">
             <h3 class="text-center">Create an Account</h3>
-            <?php require_once "./Controllers/register.php" ?>
+            <?php require_once "./controllers/register.php" ?>
 
             <div id="alert">
                 <?php require_once "./feedback.php"; ?>

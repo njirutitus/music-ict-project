@@ -1,8 +1,15 @@
 <?php
-    $host = 'localhost'; 
-    $dbname = 'music'; 
-    $user = 'root'; 
-    $pass = ''; 
+    // $host = 'localhost'; 
+    // $dbname = 'music'; 
+    // $user = 'root'; 
+    // $pass = ''; 
+
+    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+    $host = $url["host"];
+    $user = $url["user"];
+    $pass = $url["pass"];
+    $dbname = substr($url["path"], 1);
 
     # connect to thedatabase
     try {
