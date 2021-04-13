@@ -13,10 +13,15 @@
         $artist = $_POST['artist'];
         $genre = $_POST['genre'];
         $user = $_SESSION['user'];
-        $albumlogo = $_FILES['albumlogo']["name"];
+        $albumlogo = $_FILES['albumlogo'];
 
-        $n = rand(0,10);
-        $albumlogo = "blank_product$n.jpg";
+        require_once './uploadfile.php';
+
+        if (!upload($albumlogo)) {
+            $n = rand(0,10);
+            $albumlogo = "blank_product$n.jpg";
+        }
+
 
         try{
             $STH = $DBH->prepare("INSERT INTO album(album_name, artist, genre,album_logo,user) values(?,?,?,?,?)");
