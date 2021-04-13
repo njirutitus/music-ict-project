@@ -21,6 +21,9 @@
                     $_SESSION['success'] = "Login Successfull";
                     $_SESSION['user'] = $row['id'];
 
+                    unset($email);
+                    unset($password);
+
                     //check if the logged in user is a staff
                     $row['is_staff'] == 1?
                     header("location: dashboard.php"):header("location: home.php");                

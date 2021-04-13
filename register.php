@@ -16,13 +16,13 @@ require_once './controllers/conn.php';
                     <div class="col">
                         <div class="from-group mb-3">
                             <label for="firstname">First Name</label>
-                            <input name="firstname" id="firstname" type="text" value=<?php echo $first_name ?? ""; ?> class="form-control" required>
+                            <input name="firstname" id="firstname" type="text" value="<?php echo $first_name ?? ""; ?>" class="form-control" required>
                         </div>
                     </div>
                     <div class="col">
                         <div class="from-group mb-3">
                             <label for="lastname">Last Name</label>
-                            <input name="lastname" id="lastname" type="text" class="form-control" value=<?php echo $last_name ?? ""; ?> required>
+                            <input name="lastname" id="lastname" type="text" class="form-control" value="<?php echo $last_name ?? ""; ?>" required>
                         </div>
                     </div>
                 </div>

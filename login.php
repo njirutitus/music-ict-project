@@ -14,11 +14,11 @@ require_once './controllers/conn.php';
             <form action="" method="post">
                 <div class="from-group mb-3">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" class="form-control">
+                    <input type="email" value="<?php echo $email ?? ""; ?>" id="email" name="email" class="form-control">
                 </div>
                 <div class="from-group mb-3">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password" class="form-control">
+                    <input type="password" value="<?php echo $password ?? ""; ?>" id="password" name="password" class="form-control">
                 </div>
                 <input type="submit" value="Submit" class="btn btn-primary" name="submit">
             </form>
