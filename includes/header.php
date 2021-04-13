@@ -10,7 +10,7 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href=".styles/main.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
     <script src="./styles/9ad9a54963.js" crossorigin="anonymous"></script>
     <title></title>
   </head>

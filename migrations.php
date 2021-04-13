@@ -1,4 +1,6 @@
 <?php
+
+    require_once __DIR__ . '/vendor/autoload.php';
     require_once './controllers/conn.php';
     //users table
     $sql = "CREATE TABLE IF NOT EXISTS `user` (
