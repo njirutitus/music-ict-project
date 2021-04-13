@@ -28,15 +28,15 @@ require_once './controllers/conn.php';
                 </div>
                 <div class="from-group mb-3">
                     <label for="email">Email</label>
-                    <input type="email" value=<?php echo $email ?? ""; ?>  id="email" name="email" class="form-control" required>
+                    <input type="email" value="<?php echo $email ?? ""; ?>"  id="email" name="email" class="form-control" required>
                 </div>
                 <div class="from-group mb-3">
                     <label for="password">Password</label>
-                    <input type="password" value=<?php echo $password ?? ""; ?> id="password" name="password" class="form-control" required>
+                    <input type="password" value="<?php echo $password ?? ""; ?>" id="password" name="password" class="form-control" required>
                 </div>
                 <div class="from-group mb-3">
                     <label for="confirmpassword">Confirm Password</label>
-                    <input type="password" value=<?php echo $confirmpassword ?? ""; ?>  id="confirmpassword" name="confirmpassword" class="form-control" required>
+                    <input type="password" value="<?php echo $confirmpassword ?? ""; ?>"  id="confirmpassword" name="confirmpassword" class="form-control" required>
                 </div>
                 <input type="submit" value="Submit" class="btn btn-primary" name="submit">
             </form>
