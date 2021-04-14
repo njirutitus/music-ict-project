@@ -15,7 +15,7 @@
         $user = $_SESSION['user'];
         $albumlogo = $_FILES['albumlogo'];
 
-        require_once './uploadfile.php';
+        require_once './controllers/uploadfile.php';
         $albumlogo = upload($albumlogo);
 
         if (!$albumlogo) {
