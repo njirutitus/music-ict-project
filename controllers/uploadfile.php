@@ -53,7 +53,7 @@ function upload($upfile) {
         $file_name = sha1_file($upfile['tmp_name']);
         if (!move_uploaded_file(
             $upfile['tmp_name'],
-            sprintf('../images/%s.%s',
+            sprintf('./images/%s.%s',
             $file_name ,
             $ext
             )
@@ -61,8 +61,8 @@ function upload($upfile) {
                 throw new RuntimeException('Failed to move uploaded file.');
             }
             
-            $albumlogo = $file_name.$ext;
-            return true;
+            $albumlogo = "$file_name.$ext";
+            return $albumlogo;
             
         } catch (RuntimeException $e) {
             
