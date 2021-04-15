@@ -15,14 +15,17 @@
         try{
             $STH = $DBH->prepare("DELETE FROM album where id=?");
             $data = array($albumid);
-            $STH->execute($data); 
+            $STH->execute($data);
+
+            unlink("../media/$_POST[album_logo]");
             
             $_SESSION['success'] = "Album Deleted Successfully";
-            header('location: ../home.php');
         }
         catch(PDOException $e){
-            $_SESSION['error'] = "hey, $_SESSION[first_name]. I'm afraid I can't delete the Album at the moment.";
+            $_SESSION['error'] = "hey, $user[first_name]. I'm afraid I can't delete the Album at the moment.";
             file_put_contents('PDOErrors.txt', $e->getMessage(), FILE_APPEND); # log errors to afile
         }
     }
+    header('location: ../home.php');
+
 ?>

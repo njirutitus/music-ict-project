@@ -11,13 +11,19 @@
     if(isset($_GET['id'])) {
 
         $albumid = $_GET['id'];
+        $value = $_GET['value'];
 
         try{
-            $STH = $DBH->prepare("UPDATE album set is_favorite=1 where id=?");
-            $data = array($albumid);
-            $STH->execute($data); 
-            
-            $_SESSION['success'] = "Album set to favorite";
+            $STH = $DBH->prepare("UPDATE album set is_favorite=? where id=?");
+            $STH->execute([$value,$albumid]);
+
+            if($value) {
+                $_SESSION['success'] = "Album set to favorite";
+            }
+            else {
+                $_SESSION['success'] = "Album not a favorite anymore";
+            }
+
             header('location: ../home.php');
         }
         catch(PDOException $e){
