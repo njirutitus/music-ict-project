@@ -1,5 +1,11 @@
 <?php 
     require_once './controllers/conn.php';
+
+    //  If user is not logged in redirect to login page
+    if (!isset($_SESSION['user'])){
+        header("location:../login.php");
+        exit();
+    }
     
     try {
         $STH = $DBH->prepare("SELECT * FROM album where user=?");

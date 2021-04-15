@@ -1,3 +1,13 @@
+<?php 
+
+require_once './controllers/conn.php';
+
+//  If user is not logged in redirect to login page
+if (!isset($_SESSION['user'])){
+    header("location:../login.php");
+    exit();
+}
+?>
 <table class="table">
     <thead>
     <tr>
@@ -12,7 +22,6 @@
     <tbody>
 
 <?php
-require_once './controllers/conn.php';
 
 try {
     $STH = $DBH->prepare("SELECT album.album_logo as album_logo, album.id as album_id,album.album_name as album_name, album.artist as artist,song.audio_file as audio_file,song.song_title as song_title, song.is_favorite as is_favorite FROM album,song WHERE album.id = song.album and album.user=?");

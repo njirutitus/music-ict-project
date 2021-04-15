@@ -1,5 +1,12 @@
 <?php
 
+$ROOT_DIR = dirname(__DIR__);
+
+if (!isset($_SESSION['user'])){
+    header("location: $ROOT_DIR/login.php");
+    exit();
+}
+
 function upload($upfile) {
 
     
