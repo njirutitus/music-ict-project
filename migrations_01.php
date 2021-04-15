@@ -11,7 +11,7 @@
     $STH = $DBH->prepare($sql);
     $STH->execute();
 
-    $sql = "ALTER TABLE user ADD email tinytext NOT NULL unique;";
+    $sql = "ALTER TABLE user ADD email varchar(255) NOT NULL UNIQUE;";
     $STH = $DBH->prepare($sql);
     $STH->execute();
 
