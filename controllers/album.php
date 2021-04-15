@@ -10,7 +10,7 @@
     if($album =  $statement->fetch()) { ?>
         <div class="card shadow">
             <div class="card-body">
-                <img class="img-fluid" src="./images/<?php echo $album['album_logo']; ?>" alt="<?php echo htmlentities($album['album_name']); ?>">
+                <img class="img-fluid" src="./media/<?php echo $album['album_logo']; ?>" alt="<?php echo htmlentities($album['album_name']); ?>">
 
                 <h3><?php echo htmlentities($album['album_name']); ?></h3>
 
