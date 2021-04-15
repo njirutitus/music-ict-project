@@ -37,5 +37,6 @@
     catch(PDOException $e){
         echo "Error 500: Internal Server Error";
         file_put_contents('PDOErrors.txt', "\n".date('Y-m-d H:i:s').'] - '.$e->getMessage(), FILE_APPEND); # log errors to afile
+        exit();
     }
 ?>
