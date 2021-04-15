@@ -13,8 +13,8 @@ function upload($upfile) {
     ) {
         throw new RuntimeException('Invalid parameters.');
     }
-    
-    // Check $upfile['error'] value.
+
+        // Check $upfile['error'] value.
     switch ($upfile['error']) {
         case UPLOAD_ERR_OK:
             break;
@@ -28,7 +28,7 @@ function upload($upfile) {
     }
     
     // You should also check filesize here.
-    if ($upfile['size'] > 1000000) {
+    if ($upfile['size'] > 10000000) {
         throw new RuntimeException('Exceeded filesize limit.');
     }
     
@@ -41,19 +41,29 @@ function upload($upfile) {
             'jpg' => 'image/jpeg',
             'png' => 'image/png',
             'gif' => 'image/gif',
+            'wav' => 'audio/x-wav',
+            'mp3' => 'audio/mpeg',
+            'ogg' => 'audio/ogg',
         ),
         true
         )) {
-            throw new RuntimeException('Invalid file format.');
+            throw new RuntimeException("Invalid file format $ext");
         }
         
         // You should name it uniquely.
         // DO NOT USE $upfile['name'] WITHOUT ANY VALIDATION !!
         // On this example, obtain safe unique name from its binary data.
         $file_name = sha1_file($upfile['tmp_name']);
+//        echo '<pre>';
+//        var_dump(dirname(__DIR__));
+//        echo '</pre>';
+//        exit();
+        $ROOT_DIR = dirname(__DIR__);
+
         if (!move_uploaded_file(
             $upfile['tmp_name'],
-            sprintf('./images/%s.%s',
+            sprintf('%s/media/%s.%s',
+            $ROOT_DIR,
             $file_name ,
             $ext
             )
