@@ -7,4 +7,5 @@
     $STH = $DBH->prepare($sql);
     $STH->execute();
 
-    
+    echo "All migrations executed";
+

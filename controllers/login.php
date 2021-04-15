@@ -37,7 +37,7 @@
 
         catch(PDOException $e){
             $_SESSION['error'] = "I'm afraid I can't Log you in at the moment.";
-            file_put_contents('PDOErrors.txt', $e->getMessage(), FILE_APPEND); # log errors to afile
+            file_put_contents('PDOErrors.txt',"\n". date('Y-m-d H:i:s').'] - '.$e->getMessage(), FILE_APPEND); # log errors to afile
         }
     }
 ?>
