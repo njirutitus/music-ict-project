@@ -11,7 +11,7 @@
     $STH = $DBH->prepare($sql);
     $STH->execute();
 
-    $sql = "DELETE FROM user;ALTER TABLE user DROP email;ALTER TABLE user ADD email tinytext unique;";
+    $sql = "ALTER TABLE user ADD email tinytext unique;";
     $STH = $DBH->prepare($sql);
     $STH->execute();
 
