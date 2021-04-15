@@ -1,4 +1,2 @@
-SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'album_name' cannot be null
-SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IF NOT EXISTS (
-        `id` bigint(20) UNSIGNED NOT NULL,
-        `first_n...' at line 1
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`music`.`song`, CONSTRAINT `song_ibfk_1` FOREIGN KEY (`album`) REFERENCES `album` (`id`) ON UPDATE CASCADE)
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
