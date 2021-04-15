@@ -19,8 +19,7 @@
         $albumlogo = upload($albumlogo);
 
         if (!$albumlogo) {
-            $n = rand(0,10);
-            $albumlogo = "blank_product$n.jpg";
+            $albumlogo = "music.jpg";
         }
 
 
