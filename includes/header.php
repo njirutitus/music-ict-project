@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="../styles/main.css" />
     <script src="./styles/9ad9a54963.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <title></title>
   </head>
   <body>
