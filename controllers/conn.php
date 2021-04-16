@@ -30,6 +30,8 @@
             }
             else{
                 $_SESSION['error'] = "User does not exist";
+                echo $rows_affected;
+                exit();
                 unset($_SESSION['user']); 
             } 
         }
