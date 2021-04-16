@@ -11,7 +11,7 @@
     $STH = $DBH->prepare($sql);
     $STH->execute();
 
-    $sql = "ALTER TABLE user ADD email VARCHAR(200) NOT NULL UNIQUE";
+    $sql = "ALTER TABLE user ADD email VARCHAR(150) NOT NULL UNIQUE";
     $STH = $DBH->prepare($sql);
     $STH->execute();
 
