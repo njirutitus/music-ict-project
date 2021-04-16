@@ -2,16 +2,16 @@
 
     require_once __DIR__ . '/vendor/autoload.php';
     require_once './controllers/conn.php';
-    //users table
-    $sql = "DELETE FROM song";
+
+    $sql = "DELETE FROM user";
     $STH = $DBH->prepare($sql);
     $STH->execute();
 
-    $sql = "DELETE FROM album";
+    $sql = "ALTER TABLE user DROP email";
     $STH = $DBH->prepare($sql);
     $STH->execute();
 
-    $sql = "ALTER TABLE user ADD email VARCHAR(20) NOT NULL UNIQUE";
+    $sql = "ALTER TABLE user ADD email VARCHAR(200) NOT NULL UNIQUE";
     $STH = $DBH->prepare($sql);
     $STH->execute();
 
