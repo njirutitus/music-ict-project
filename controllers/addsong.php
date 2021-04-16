@@ -27,6 +27,9 @@ if(isset($_POST['submit'])) {
             file_put_contents('../PDOErrors.txt', $e->getMessage(), FILE_APPEND); # log errors to afile
         }
     }
+    else {
+        $_SESSION['error'] = "Couldn't move the uploaded song";
+    }
 }
 header("location: ../albumsongs.php?id=$_POST[album_id]");
 ?>
