@@ -1,0 +1,15 @@
+{
+  "name": "Viberr Music App",
+  "short_name": "Viberr",
+  "description": "An app to save all your favorite albums",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
