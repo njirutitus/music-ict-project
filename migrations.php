@@ -7,7 +7,7 @@
         `id` bigint(20) UNSIGNED NOT NULL,
         `first_name` tinytext NOT NULL,
         `last_name` tinytext NOT NULL,
-        `email` tinytext NOT NULL,
+        `email` VARCHAR(150) NOT NULL UNIQUE,
         `password` tinytext NOT NULL,
         `is_active` tinyint(1) NOT NULL DEFAULT 1,
         `is_staff` tinyint(1) NOT NULL DEFAULT 0,

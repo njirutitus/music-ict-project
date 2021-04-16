@@ -32,6 +32,7 @@ $id = $_GET['id'];
                     <div class="tab-content p-3" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-allsongs" role="tabpanel" aria-labelledby="pills-allsongs-tab">
                             <h3>All Songs</h3>
+                            <div class="table-responsive">
                             <table class="table">
                                 <thead>
                                     <tr>
@@ -45,6 +46,7 @@ $id = $_GET['id'];
                                     <?php require_once "./controllers/albumsongs.php"; ?>
                                 </tbody>
                             </table>
+                            </div>
 
                         </div>
                         <div class="tab-pane fade" id="pills-addnew" role="tabpanel" aria-labelledby="pills-addnew-tab">

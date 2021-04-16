@@ -8,6 +8,7 @@ if (!isset($_SESSION['user'])){
     exit();
 }
 ?>
+<div class="table-responsive">
 <table class="table">
     <thead>
     <tr>
@@ -58,3 +59,4 @@ catch(PDOException $e){
 ?>
     </tbody>
 </table>
+</div>
