@@ -1,2 +1,3 @@
 SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`music`.`song`, CONSTRAINT `song_ibfk_1` FOREIGN KEY (`album`) REFERENCES `album` (`id`) ON UPDATE CASCADE)
 SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+2021-04-16 22:26:40] - SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)

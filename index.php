@@ -6,8 +6,13 @@ require_once './includes/header.php';
 
 
 <section class="container" style="min-height: 100%">
-      <h3>Music is everything</h3>
+<div class="hero">
+<div class="hero-text">
+    <h3>Welcome to Viberr</h3>
+    <p>Viberr is an application that let's you upload, store, and play all of your music from the cloud. You can now manage and listen to your music from any device, anywhere in the world.</p>
+</div>
     </section>
+</div>
 
 
 <?php

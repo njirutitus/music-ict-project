@@ -23,7 +23,7 @@
     <title></title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-default">
       <div class="container-fluid">
         <a class="navbar-brand me-auto" href="#">Vibe</a>
         <button

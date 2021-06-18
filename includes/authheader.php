@@ -23,7 +23,7 @@
     <title>Viberr</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-default">
       <div class="container-fluid">
         <a class="navbar-brand me-auto" href="home.php">Vibe</a>
         <button
@@ -37,6 +37,17 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+        <button class="navbar-toggler jplayerButton"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="span-1"></span>
+          <span class="span-2"></span>
+          <span class="span-3"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -47,8 +58,25 @@
             </li>
           </ul>
           <form class="d-flex me-auto">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn bg-light" type="submit">Search</button>
+            <div class="search-wrapper">
+              <input class="search-input" type="text" placeholder="Search" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="feather feather-search"
+                viewBox="0 0 24 24"
+              >
+                <defs></defs>
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="M21 21l-4.35-4.35"></path>
+              </svg>
+            </div>
           </form>
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -60,5 +88,4 @@
           </ul>
         </div>
       </div>
-    </nav>
-   
+    </nav>  
