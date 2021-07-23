@@ -6,7 +6,15 @@
       "email": "njirutitus@gmail.com"
     }
   ],
-  "require": {},
+  "autoload": {
+    "psr-4": {
+      "app\\": "./"
+    }
+  },
+  "require": {
+    "tn/php-mvc-core": "^1.0",
+    "vlucas/phpdotenv": "^5.3"
+  },
   "require-dev": {
     "heroku/heroku-buildpack-php": "*"
   }
