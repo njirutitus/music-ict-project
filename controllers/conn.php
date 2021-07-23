@@ -1,15 +1,13 @@
 <?php
-    // $host = 'localhost'; 
-    // $dbname = 'music'; 
-    // $user = 'root'; 
-    // $pass = ''; 
 
-    $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-
-    $host = $url["host"];
-    $user = $url["user"];
-    $pass = $url["pass"];
-    $dbname = substr($url["path"], 1);
+    require_once __DIR__ . '/../vendor/autoload.php';
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+    $dotenv->load();
+    
+    $host = $_ENV['DB_HOST']; 
+    $dbname = $_ENV['DB_NAME']; 
+    $user = $_ENV['DB_USER']; 
+    $pass = $_ENV['DB_PASSWORD']; 
 
     # connect to thedatabase
     try {
