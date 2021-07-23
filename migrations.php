@@ -3,6 +3,8 @@
     require_once __DIR__ . '/vendor/autoload.php';
     require_once './controllers/conn.php';
     //users table
+
+    echo "Creating users table\n";
     $sql = "CREATE TABLE IF NOT EXISTS `user` (
         `id` SERIAL,
         `first_name` tinytext NOT NULL,
@@ -16,8 +18,10 @@
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
     $STH = $DBH->prepare($sql);
     $STH->execute();
+    echo "Created users table\n";
 
     //albums table
+    echo "Creating Albums table\n";
 
     $STH = $DBH->prepare("CREATE TABLE IF NOT EXISTS `album` (
         `id` SERIAL,
@@ -31,8 +35,10 @@
         FOREIGN KEY(user) REFERENCES user(id) ON DELETE RESTRICT ON UPDATE CASCADE
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");
     $STH->execute();
+    echo "Created albums table\n";
 
     // songs table
+    echo "Creating Songs table\n";
     $sql = "CREATE TABLE IF NOT EXISTS`song` (
         `id` SERIAL,
         `song_title` tinytext NOT NULL,
@@ -44,6 +50,7 @@
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4";
     $STH = $DBH->prepare($sql);
     $STH->execute();
+    echo "Created Songs table\n";
 
     echo "Executed all migrations."
 
